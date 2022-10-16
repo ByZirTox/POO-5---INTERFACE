@@ -1,6 +1,6 @@
 <?php
 
-class Vehicle
+abstract class Vehicle
 {
  
     protected string $color;
@@ -11,6 +11,7 @@ class Vehicle
 
     protected int $nbWheels;
 
+    
     public function __construct(string $color, int $nbSeats)
     {
         $this->color = $color;
