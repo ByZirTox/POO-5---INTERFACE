@@ -34,3 +34,22 @@ $MotorWay = new MotorWay($bike, 4, 130);
 var_dump($MotorWay);
 echo $MotorWay->addVehicule($bike); // $bike a modfier pour la correction
 
+$subaru->setHasParkBrake(false);
+
+try {
+    echo ($subaru->start());
+} catch (Exception $e) {
+    echo $e->getMessage();
+} finally {
+    echo 'Ma subaru roule comme un donut';
+}
+
+$subaru->setHasParkBrake(true);
+
+try {
+    echo ($subaru->start());
+} catch (Exception $e) {
+    echo $e->getMessage();
+} finally {
+    echo 'Ma subaru roule comme un donut';
+}

@@ -7,7 +7,6 @@ final class MotorWay extends HighWay
   protected int $maxSpeed = 130;
   protected int $nbLane = 4;
 
-
     public function __construct(Vehicle $currentVehicles, int $nbLane, int $maxSpeed)
     {
         parent::__construct($currentVehicles, $nbLane, $maxSpeed);
