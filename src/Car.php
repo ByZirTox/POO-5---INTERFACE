@@ -1,13 +1,12 @@
 <?php
 
-
-class Car extends Vehicle
+class Car extends Vehicle implements LightableInterface
 {
   private string $energy;
 
   private int $energyLevel;
   private bool $hasParkBrake;
-
+ 
 
 
   public const ALLOWED_ENERGIES = [
@@ -65,5 +64,15 @@ class Car extends Vehicle
       throw (new Exception('brake set on!'));
     }
     return 'GO GO';
+  }
+
+  public function switchOn(bool $bool): bool
+  {
+    return 'true';
+  }
+
+  public function switchOff(bool $bool): bool
+  {
+    return 'false';
   }
 }
